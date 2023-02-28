@@ -2,4 +2,11 @@
     <string name="app_name">AdhiPradanaTest</string>
     <string name="sign_in">Sign in</string>
     <string name="first_name_hint">First name</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="email_hint">Email</string>
+    <string name="already_have_an_account_text">Already have an account?</string>
+    <string name="log_in_hint">Log in</string>
+    <string name="sign_in_with_google_hint">Sign in with Google</string>
+    <string name="sign_in_with_apple_hint">Sign in with Apple</string>
+
 </resources>
