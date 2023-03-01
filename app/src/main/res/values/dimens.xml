@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="null_dp">0dp</dimen>
+    <dimen name="log_in_edit_text_size">29dp</dimen>
+    <dimen name="log_in_margin_size">35dp</dimen>
+    <dimen name="log_in_with_button_text_size">12sp</dimen>
+    <dimen name="log_in_custom_icon_pudding_size">16dp</dimen>
+</resources>

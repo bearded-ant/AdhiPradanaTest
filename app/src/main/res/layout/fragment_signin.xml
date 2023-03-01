@@ -82,8 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/already_have_an_account_text"
-
-                android:textSize="10sp" />
+                android:textSize="@dimen/small_text_size" />
 
             <Button
                 android:id="@+id/fr_sign_in_log_in_btn"
@@ -115,7 +114,7 @@
             android:id="@+id/fr_sign_in_with_apple_btn"
             style="@style/MyLoginWithButton"
             android:text="@string/sign_in_with_apple_hint"
-            app:icon="@drawable/apple"/>
+            app:icon="@drawable/apple" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
