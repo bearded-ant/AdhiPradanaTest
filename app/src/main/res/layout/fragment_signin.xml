@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="44dp">
+    android:padding="44dp"
+    tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/fr_sign_in_top_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/fr_sign_in_center_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in" />
+            android:text="@string/sign_in"
+            android:textFontWeight="600"
+            android:textSize="26sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -30,70 +32,62 @@
         android:id="@+id/fr_sign_in_center_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/fr_sign_in_bottom_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fr_sign_in_top_block">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
-            android:gravity="center">
+            style="@style/MyInputTextLayout"
+            android:hint="@string/first_name_hint">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fr_sign_in_first_name_et"
-                android:layout_width="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_height="wrap_content"
-                android:text="@string/first_name_hint" />
+                style="@style/MyEditText" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+            style="@style/MyInputTextLayout"
+            android:hint="@string/last_name_hint">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fr_sign_in_last_name_et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/last_name_hint" />
+                style="@style/MyEditText" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
+            style="@style/MyInputTextLayout"
+            android:hint="@string/email_hint">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fr_sign_in_email_et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/email_hint" />
+                style="@style/MyEditText" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/fr_sign_in_first_name_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_in" />
+            style="@style/SmallButton"
+            android:text="@string/sign_in"
+            app:shapeAppearanceOverlay="@style/SmallButton.Cut" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/already_have_an_account_text" />
+                android:text="@string/already_have_an_account_text"
 
-            <com.google.android.material.button.MaterialButton
+                android:textSize="10sp" />
+
+            <Button
                 android:id="@+id/fr_sign_in_log_in_btn"
+                style="@style/MyTextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/log_in_hint" />
@@ -104,24 +98,24 @@
         android:id="@+id/fr_sign_in_bottom_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fr_sign_in_center_block">
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/fr_sign_in_with_google_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_in_with_google_hint" />
+            style="@style/MyLoginWithButton"
+            android:text="@string/sign_in_with_google_hint"
+            app:icon="@drawable/google" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/fr_sign_in_with_apple_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_in_with_apple_hint" />
+            style="@style/MyLoginWithButton"
+            android:text="@string/sign_in_with_apple_hint"
+            app:icon="@drawable/apple"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
