@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome back"
+            android:text="@string/welcome_back_text"
             android:textFontWeight="600"
             android:textSize="@dimen/header_text_size" />
 
@@ -54,7 +54,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fr_sign_in_last_name_et"
                 style="@style/MyEditText"
-                android:hint="Password"
+                android:hint="@string/password_text"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,7 +74,7 @@
         <Button
             android:id="@+id/fr_sign_in_first_name_btn"
             style="@style/MyBigButton"
-            android:text="Login"
+            android:text="@string/login_text"
             app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
