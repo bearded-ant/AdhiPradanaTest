@@ -6,4 +6,9 @@
     <dimen name="log_in_margin_size">35dp</dimen>
     <dimen name="log_in_with_button_text_size">12sp</dimen>
     <dimen name="log_in_custom_icon_pudding_size">16dp</dimen>
+    <dimen name="my_corner_cut">15dp</dimen>
+    <dimen name="big_button_height">46dp</dimen>
+    <dimen name="layout_horizontal_padding">44dp</dimen>
+    <dimen name="header_text_size">26sp</dimen>
+
 </resources>

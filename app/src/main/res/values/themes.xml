@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
 
     <!--<style name="Theme.AdhiPradanaTest" parent="Theme.AppCompat.Light">-->
@@ -16,31 +16,46 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="SmallButton" parent="">
+    <style name="MyBigButton" parent="">
         <item name="textAllCaps">false</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_height">@dimen/big_button_height</item>
 
     </style>
 
-    <style name="SmallButton.Cut" parent="SmallButton">
+    <style name="MyCorner.Cut" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">15dp</item>
+        <item name="cornerSize">@dimen/my_corner_cut</item>
     </style>
 
-    <style name="MyInputTextLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+    <style name="MyInputTextLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/log_in_edit_text_size</item>
+
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@color/mtrl_filled_background_color</item>
+
         <item name="boxStrokeWidth">@dimen/null_dp</item>
-        <item name="shapeAppearanceOverlay">@style/SmallButton.Cut</item>
+        <item name="boxStrokeWidthFocused">@dimen/null_dp</item>
+        <item name="hintEnabled">false</item>
+
+        <item name="shapeAppearanceOverlay">@style/MyCorner.Cut</item>
         <item name="android:layout_marginBottom">@dimen/log_in_margin_size</item>
     </style>
 
     <style name="MyEditText" parent="">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_height">@dimen/log_in_edit_text_size</item>
+        <item name="android:gravity">center</item>
+<!--        <item name="android:gravity">center_horizontal</item>-->
+
         <item name="android:textSize">11sp</item>
+        <item name="android:minHeight">@dimen/null_dp</item>
+        <item name="android:minWidth">@dimen/null_dp</item>
+        <item name="android:insetTop">@dimen/null_dp</item>
+        <item name="android:insetBottom">@dimen/null_dp</item>
+        <item name="android:paddingTop">@dimen/null_dp</item>
+        <item name="android:paddingBottom">@dimen/null_dp</item>
     </style>
 
     <style name="MyTextButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
