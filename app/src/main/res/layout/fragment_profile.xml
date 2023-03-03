@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FA00FF"
-
-    android:orientation="vertical"
+    android:background="@color/primary_background"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -22,39 +20,49 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
             android:text="Profile"
+            android:textColor="@color/black"
             android:textSize="15sp" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/profile"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/userpic"
             app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Change photo"
+            android:textColor="#808080"
             android:textSize="8sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="36dp"
             android:text="Satria Adhi Pradana"
+            android:textColor="#3F3F3F"
             android:textSize="15sp" />
 
         <Button
             android:id="@+id/fr_profile_upload_btn"
-            style="@style/MyBigButton"
+            style="@style/MyBigButton.Margin"
             android:text="Upload item"
             app:icon="@drawable/upload"
             app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <ScrollView
+        android:id="@+id/fr_profile_middle_block"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/fr_profile_bottom_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fr_profile_top_block">
@@ -297,21 +305,23 @@
 
     </ScrollView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fr_profile_bottom_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:cardBackgroundColor="@color/white"
-        app:shapeAppearanceOverlay="@style/MyCorner.BottomNavigation">
+        app:layout_constraintTop_toBottomOf="@id/fr_profile_middle_block">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             style="@style/MyBottomMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/bottom_navigation_corners"
             app:menu="@menu/bottom_navigation_menu" />
-    </com.google.android.material.card.MaterialCardView>
-    
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
