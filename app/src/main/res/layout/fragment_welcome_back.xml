@@ -9,12 +9,12 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_sign_in_top_block"
+        android:id="@+id/fr_welcome_back_top_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/fr_sign_in_center_block"
+        app:layout_constraintBottom_toTopOf="@+id/fr_welcome_back_center_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -29,20 +29,20 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_sign_in_center_block"
+        android:id="@+id/fr_welcome_back_center_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/fr_sign_in_bottom_block"
+        app:layout_constraintBottom_toTopOf="@+id/fr_welcome_back_bottom_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_sign_in_top_block">
+        app:layout_constraintTop_toBottomOf="@+id/fr_welcome_back_top_block">
 
         <com.google.android.material.textfield.TextInputLayout style="@style/MyInputTextLayout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fr_sign_in_first_name_et"
+                android:id="@+id/fr_welcome_back_first_name_et"
                 style="@style/MyEditText"
                 android:hint="@string/first_name_hint" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -52,7 +52,7 @@
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fr_sign_in_last_name_et"
+                android:id="@+id/fr_welcome_back_last_name_et"
                 style="@style/MyEditText"
                 android:hint="@string/password_text"
                 android:inputType="textPassword" />
@@ -61,7 +61,7 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_sign_in_bottom_block"
+        android:id="@+id/fr_welcome_back_bottom_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -69,10 +69,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_sign_in_center_block">
+        app:layout_constraintTop_toBottomOf="@+id/fr_welcome_back_center_block">
 
         <Button
-            android:id="@+id/fr_sign_in_first_name_btn"
+            android:id="@+id/fr_welcome_back_login_btn"
             style="@style/MyBigButton"
             android:text="@string/login_text"
             app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
