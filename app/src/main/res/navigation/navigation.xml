@@ -2,10 +2,29 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/signInFragment">
 
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.adhipradanatest.ProfileFragment"
         android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.adhipradanatest.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFr_to_welcomeBackFr"
+            app:destination="@id/welcomeBackFragment" />
+        <action
+            android:id="@+id/action_signInFr_to_profileFr"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeBackFragment"
+        android:name="com.example.adhipradanatest.WelcomeBackFragment"
+        android:label="WelcomeBackFragment" >
+        <action
+            android:id="@+id/action_welcomeBackFr_to_profileFr"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>
