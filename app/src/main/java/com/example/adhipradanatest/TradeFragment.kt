@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.adhipradanatest.databinding.FragmentProfileBinding
+import com.example.adhipradanatest.databinding.FragmentTradeBinding
 
-class ProfileFragment : Fragment() {
+class TradeFragment : Fragment() {
     companion object {
-        fun newInstance(): ProfileFragment = ProfileFragment()
+        fun newInstance(): TradeFragment = TradeFragment()
     }
 
-    private var _binding: FragmentProfileBinding? = null
+    private var _binding: FragmentTradeBinding? = null
     private val binding
         get() = _binding!!
 
@@ -22,18 +22,18 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProfileBinding.inflate(layoutInflater)
+        _binding = FragmentTradeBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.bottomNavigation.itemIconTintList = null
-        binding.bottomNavigation.selectedItemId = R.id.bottom_menu_page_profile
+        binding.bottomNavigation.selectedItemId = R.id.bottom_menu_page_home
 
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.bottom_menu_page_profile -> findNavController().navigate(R.id.action_profileFr_to_tradeFr)
+                R.id.bottom_menu_page_home -> findNavController().navigate(R.id.action_tradeFr_to_profileFr)
             }
             false
         }

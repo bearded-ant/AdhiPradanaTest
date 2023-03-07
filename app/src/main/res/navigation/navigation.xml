@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.adhipradanatest.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFr_to_tradeFr"
+            app:destination="@id/tradeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.adhipradanatest.SignInFragment"
@@ -25,6 +29,14 @@
         android:label="WelcomeBackFragment" >
         <action
             android:id="@+id/action_welcomeBackFr_to_profileFr"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeFragment"
+        android:name="com.example.adhipradanatest.TradeFragment"
+        android:label="TradeFragment" >
+        <action
+            android:id="@+id/action_tradeFr_to_profileFr"
             app:destination="@id/profileFragment" />
     </fragment>
 </navigation>
