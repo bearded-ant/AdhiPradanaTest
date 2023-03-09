@@ -20,40 +20,32 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:clickable="true"
-            android:focusable="true"
-
-            app:strokeWidth="1dp"
-            app:strokeColor="#B9B9B9"
-
-            android:scaleType="centerCrop"
-            android:elevation="@dimen/null_dp"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+            android:clickable="true"
+            android:elevation="@dimen/null_dp"
+
+            android:focusable="true"
+            android:scaleType="centerCrop"
             android:src="@drawable/seller_avatar"
-            app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent"
+            app:strokeColor="#B9B9B9"
+            app:strokeWidth="1dp" />
 
         <Button
             android:id="@+id/item_big_sale_btn"
-            style="@style/MyTextButton"
+            style="@style/MyTextButton.BigCard.Discount"
             android:layout_width="49dp"
             android:layout_height="18dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="#F93A3A"
-            android:fontFamily="@font/poppins_semibold"
-            android:letterSpacing="-0.06"
 
-            android:paddingTop="2dp"
             android:text="30% off"
-
-            android:textColor="@color/white"
-            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/MyCorner.ItemBigCategoryBtn.Cut" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/item_big_guideline"
@@ -64,21 +56,14 @@
 
         <Button
             android:id="@+id/item_small_category_btn"
-            style="@style/MyTextButton"
+            style="@style/MyTextButton.BigCard.Category"
             android:layout_width="49dp"
             android:layout_height="18dp"
-            android:layout_marginStart="0dp"
-            android:backgroundTint="#C4C4C4D9"
-            android:fontFamily="@font/poppins_semibold"
-            android:letterSpacing="-0.06"
+            android:layout_marginStart="@dimen/null_dp"
 
-            android:paddingTop="2dp"
             android:text="Kids"
-            android:textColor="@color/black"
-            android:textSize="9sp"
             app:layout_constraintStart_toStartOf="@+id/item_small_head_txt"
-            app:layout_constraintTop_toBottomOf="@+id/item_big_guideline"
-            app:shapeAppearanceOverlay="@style/MyCorner.ItemBigCategoryBtn.Cut" />
+            app:layout_constraintTop_toBottomOf="@+id/item_big_guideline" />
 
         <TextView
             android:id="@+id/item_small_head_txt"
@@ -87,10 +72,10 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="6dp"
             android:ellipsize="end"
-            android:lines="2"
-
             android:fontFamily="@font/poppins_semibold"
+
             android:letterSpacing="-0.06"
+            android:lines="2"
 
             android:text="New balance sneakers"
             android:textColor="@color/white"
@@ -103,12 +88,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:text="$ 33,00"
-            android:textColor="@color/white"
-            android:textSize="10sp"
-
             android:fontFamily="@font/poppins_semibold"
             android:letterSpacing="-0.06"
+            android:text="$ 33,00"
+
+            android:textColor="@color/white"
+            android:textSize="10sp"
 
             app:layout_constraintBottom_toBottomOf="@id/item_big_add_fab"
             app:layout_constraintStart_toStartOf="parent"
