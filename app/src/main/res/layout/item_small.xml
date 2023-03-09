@@ -13,10 +13,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/phone"
-            app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
+            app:shapeAppearanceOverlay="@style/MyCorner.ItemSmall.Cut" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/item_small_guideline"
+            android:id="@+id/item_big_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -36,13 +36,14 @@
             android:textColor="@color/black"
             android:textSize="6sp"
             app:layout_constraintStart_toStartOf="@+id/item_small_head_txt"
-            app:layout_constraintTop_toBottomOf="@+id/item_small_guideline" />
+            app:layout_constraintTop_toBottomOf="@+id/item_big_guideline" />
 
         <TextView
             android:id="@+id/item_small_head_txt"
-            android:layout_width="75dp"
+            android:layout_width="61dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
+            android:layout_marginTop="3dp"
             android:lines="2"
             android:ellipsize="end"
 

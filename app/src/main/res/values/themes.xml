@@ -33,9 +33,21 @@
         <item name="cornerSize">@dimen/my_corner_cut</item>
     </style>
 
-    <style name="MyCorner.ImageCut" parent="">
+    <style name="MyCorner.Image.Cut" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="MyCorner.ItemSmall.Cut" parent="MyCorner.Cut">
+        <item name="cornerSize">9dp</item>
+    </style>
+
+    <style name="MyCorner.ItemBig.Cut" parent="MyCorner.Cut">
+        <item name="cornerSize">11dp</item>
+    </style>
+
+    <style name="MyCorner.ItemBigCategoryBtn.Cut" parent="MyCorner.Cut">
+        <item name="cornerSize">8dp</item>
     </style>
 
     <style name="MyCorner.ImageCorner50percent" parent="">
@@ -116,6 +128,8 @@
     </style>
 
     <style name="MyExtraSmallFAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@null</item>
         <item name="ensureMinTouchTargetSize">false</item>
         <item name="elevation">@dimen/null_dp</item>
@@ -126,6 +140,17 @@
         <item name="fabCustomSize">20dp</item>
         <item name="maxImageSize">14dp</item>
         <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="MyMiddleFAB" parent="MyExtraSmallFAB">
+        <item name="fabCustomSize">28dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="MyBigFAB" parent="MyExtraSmallFAB">
+        <item name="fabCustomSize">35dp</item>
+        <item name="maxImageSize">24dp</item>
+        <item name="android:layout_margin">8dp</item>
     </style>
 
 </resources>
