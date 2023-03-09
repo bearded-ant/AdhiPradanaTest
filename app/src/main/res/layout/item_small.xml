@@ -15,47 +15,59 @@
             android:src="@drawable/phone"
             app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/item_small_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="7dp"
-            android:paddingBottom="7dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="91dp" />
+
+        <Button
+            android:id="@+id/item_small_category_btn"
+            style="@style/MyTextButton"
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+
+            android:layout_marginStart="0dp"
+            android:backgroundTint="#C4C4C4D9"
+
+            android:padding="@dimen/null_dp"
+            android:text="Phones"
+            android:textColor="@color/black"
+            android:textSize="6sp"
+            app:layout_constraintStart_toStartOf="@+id/item_small_head_txt"
+            app:layout_constraintTop_toBottomOf="@+id/item_small_guideline" />
+
+        <TextView
+            android:id="@+id/item_small_head_txt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:lines="2"
+            android:ellipsize="end"
+
+            android:text="Samsung S10 wery wall samsung phone"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_small_category_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="$ 180,000"
+            android:textColor="@color/white"
+            android:textSize="7sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phones"
-                android:textSize="6sp"
-                style="@style/MyBottomMenu"
-                android:textColor="@color/black"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Samsung S10"
-                android:textSize="9sp"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$ 180,000"
-                android:textSize="7sp"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             style="@style/MyExtraSmallFAB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="add"
             android:src="@drawable/ic_baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
