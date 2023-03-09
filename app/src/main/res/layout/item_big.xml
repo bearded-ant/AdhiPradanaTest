@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="174dp"
-    android:layout_height="221dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/item_big_card_width"
+    android:layout_height="@dimen/item_big_card_height"
     app:cardElevation="@dimen/null_dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,91 +19,57 @@
             app:shapeAppearanceOverlay="@style/MyCorner.ItemBig.Cut" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-
-            android:clickable="true"
-            android:elevation="@dimen/null_dp"
-
-            android:focusable="true"
-            android:scaleType="centerCrop"
+            style="@style/Image.SellerAvatar"
             android:src="@drawable/seller_avatar"
+            android:contentDescription="@string/seller_avatar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent"
-            app:strokeColor="#B9B9B9"
-            app:strokeWidth="1dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/item_big_sale_btn"
             style="@style/MyTextButton.BigCard.Discount"
-            android:layout_width="49dp"
-            android:layout_height="18dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-
-            android:text="30% off"
+            android:layout_width="@dimen/item_big_text_btn_width"
+            android:layout_height="@dimen/item_big_text_btn_height"
+            android:layout_margin="@dimen/margin_8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="30% off" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/item_big_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="121dp" />
+            app:layout_constraintGuide_begin="@dimen/item_big_guideline_start" />
 
         <Button
-            android:id="@+id/item_small_category_btn"
+            android:id="@+id/item_big_category_btn"
             style="@style/MyTextButton.BigCard.Category"
-            android:layout_width="49dp"
-            android:layout_height="18dp"
+            android:layout_width="@dimen/item_big_text_btn_width"
+            android:layout_height="@dimen/item_big_text_btn_height"
             android:layout_marginStart="@dimen/null_dp"
-
-            android:text="Kids"
-            app:layout_constraintStart_toStartOf="@+id/item_small_head_txt"
-            app:layout_constraintTop_toBottomOf="@+id/item_big_guideline" />
+            app:layout_constraintStart_toStartOf="@+id/item_big_head_txt"
+            app:layout_constraintTop_toBottomOf="@+id/item_big_guideline"
+            tools:text="Kids" />
 
         <TextView
-            android:id="@+id/item_small_head_txt"
-            android:layout_width="87dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="6dp"
-            android:ellipsize="end"
-            android:fontFamily="@font/poppins_semibold"
-
-            android:letterSpacing="-0.06"
-            android:lines="2"
-
-            android:text="New balance sneakers"
-            android:textColor="@color/white"
-            android:textSize="13sp"
+            android:id="@+id/item_big_head_txt"
+            style="@style/BigCard.Text.Head"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_small_category_btn" />
+            app:layout_constraintTop_toBottomOf="@+id/item_big_category_btn"
+            tools:text="New balance sneakers" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:letterSpacing="-0.06"
-            android:text="$ 33,00"
-
-            android:textColor="@color/white"
-            android:textSize="10sp"
-
+            style="@style/BigCard.Text.Cost"
             app:layout_constraintBottom_toBottomOf="@id/item_big_add_fab"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/item_big_add_fab" />
+            app:layout_constraintTop_toTopOf="@id/item_big_add_fab"
+            tools:text="$ 33,00" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/item_big_add_fab"
             style="@style/MyBigFAB"
-            android:contentDescription="add"
+            android:contentDescription="@string/item_big_add_description"
             android:src="@drawable/ic_baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -110,7 +77,7 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/item_big_favorite_fab"
             style="@style/MyMiddleFAB"
-            android:contentDescription="favorite"
+            android:contentDescription="@string/item_big_favorite_description"
             android:src="@drawable/ic_baseline_favorite_border_24"
             app:layout_constraintBottom_toBottomOf="@id/item_big_add_fab"
             app:layout_constraintEnd_toStartOf="@id/item_big_add_fab"

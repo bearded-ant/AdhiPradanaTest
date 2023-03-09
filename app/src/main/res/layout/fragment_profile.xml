@@ -83,7 +83,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/credit_card"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -115,7 +115,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/credit_card"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -147,7 +147,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/credit_card"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -184,7 +184,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/credit_card"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -216,7 +216,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/restore"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -248,7 +248,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/help"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -280,7 +280,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/logout"
-                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent" />
+                        app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut" />
 
                     <TextView
                         android:layout_width="0dp"

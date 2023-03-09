@@ -50,12 +50,12 @@
         <item name="cornerSize">8dp</item>
     </style>
 
-    <style name="MyCorner.ImageCorner50percent" parent="">
+    <style name="MyCorner.ImageCorner50percent.Cut" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
 
-    <style name="MyCorner.BottomNavigation" parent="">
+    <style name="MyCorner.BottomNavigation.Cut" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopRight">28dp</item>
         <item name="cornerSizeTopLeft">28dp</item>
@@ -170,6 +170,42 @@
         <item name="fabCustomSize">35dp</item>
         <item name="maxImageSize">24dp</item>
         <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="Image.SellerAvatar" parent="">
+        <item name="android:layout_width">@dimen/seller_avatar_size</item>
+        <item name="android:layout_height">@dimen/seller_avatar_size</item>
+        <item name="android:layout_margin">@dimen/margin_8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="elevation">@dimen/null_dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/MyCorner.ImageCorner50percent.Cut</item>
+        <item name="strokeColor">@color/seller_avatar_stroke_color</item>
+        <item name="strokeWidth">@dimen/seller_avatar_stroke_size</item>
+    </style>
+
+    <style name="BigCard.Text" parent="">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">-0.06</item>
+    </style>
+
+    <style name="BigCard.Text.Head" parent="BigCard.Text">
+        <item name="android:layout_width">@dimen/item_big_description_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_8dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_6dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">2</item>
+        <item name="android:textSize">@dimen/item_big_description_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="BigCard.Text.Cost" parent="BigCard.Text.Head">
+        <item name="android:layout_marginTop">@dimen/margin_8dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
 </resources>

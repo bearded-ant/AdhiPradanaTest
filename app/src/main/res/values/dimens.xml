@@ -10,5 +10,16 @@
     <dimen name="big_button_height">46dp</dimen>
     <dimen name="layout_horizontal_padding">44dp</dimen>
     <dimen name="header_text_size">26sp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="seller_avatar_size">25dp</dimen>
+    <dimen name="seller_avatar_stroke_size">1dp</dimen>
+    <dimen name="item_big_text_btn_width">49dp</dimen>
+    <dimen name="item_big_text_btn_height">18dp</dimen>
+    <dimen name="item_big_guideline_start">121dp</dimen>
+    <dimen name="item_big_description_size">87dp</dimen>
+    <dimen name="margin_6dp">6dp</dimen>
+    <dimen name="item_big_description_text_size">13sp</dimen>
+    <dimen name="item_big_card_width">174dp</dimen>
+    <dimen name="item_big_card_height">221dp</dimen>
 
 </resources>

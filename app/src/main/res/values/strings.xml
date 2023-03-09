@@ -11,5 +11,8 @@
     <string name="welcome_back_text">Welcome back</string>
     <string name="password_text">Password</string>
     <string name="login_text">Login</string>
+    <string name="item_big_add_description">add to basket</string>
+    <string name="item_big_favorite_description">favorite</string>
+    <string name="seller_avatar">seller avatar</string>
 
 </resources>
