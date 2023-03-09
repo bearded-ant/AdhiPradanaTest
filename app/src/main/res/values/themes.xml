@@ -208,4 +208,23 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="RoundedChips" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipIconVisible">true</item>
+
+
+        <item name="chipMinHeight">@dimen/null_dp</item>
+        <item name="chipIconSize">24dp</item>
+        <item name="closeIconSize">18dp</item>
+
+        <item name="chipStartPadding">4dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">0dp</item>
+        <item name="textStartPadding">8dp</item>
+        <item name="textEndPadding">6dp</item>
+        <item name="closeIconStartPadding">2dp</item>
+        <item name="closeIconEndPadding">2dp</item>
+        <item name="chipEndPadding">6dp</item>
+
+
+    </style>
 </resources>
