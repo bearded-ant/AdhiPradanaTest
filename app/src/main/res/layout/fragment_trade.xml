@@ -49,12 +49,26 @@
             android:textColor="#3F3F3F"
             android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/fr_profile_upload_btn"
-            style="@style/MyBigButton.Margin"
-            android:text="Upload item"
-            app:icon="@drawable/upload"
-            app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fr_trade_search"
+            style="@style/MyInputTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="56dp"
+            app:endIconDrawable="@drawable/search"
+            app:endIconMinSize="36dp"
+            app:endIconMode="custom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/MyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="#F5F6F6"
+                android:maxLines="1"
+                android:inputType="text"
+                android:hint="What are you looking for ?" />
+
+        </com.google.android.material.textfield.TextInputLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.core.widget.NestedScrollView
@@ -72,8 +86,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <include layout="@layout/item_category" />
+
             <include layout="@layout/item_small" />
-            <include layout="@layout/item_big"/>
+
+            <include layout="@layout/item_big" />
 
         </LinearLayout>
 
