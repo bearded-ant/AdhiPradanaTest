@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_background"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/fr_trade_app_bar"
@@ -62,7 +62,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="47dp"
-        android:layout_marginRight="@dimen/margin_8dp"
         android:text="@string/location_text"
         android:textColor="#5B5B5B"
         android:textSize="10sp"

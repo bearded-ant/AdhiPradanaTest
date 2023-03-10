@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.adhipradanatest.ProfileFragment"
+        android:name="com.example.adhipradanatest.ui.ProfileFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFr_to_tradeFr"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.adhipradanatest.SignInFragment"
+        android:name="com.example.adhipradanatest.ui.SignInFragment"
         android:label="SignInFragment" >
         <action
             android:id="@+id/action_signInFr_to_welcomeBackFr"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeBackFragment"
-        android:name="com.example.adhipradanatest.WelcomeBackFragment"
+        android:name="com.example.adhipradanatest.ui.WelcomeBackFragment"
         android:label="WelcomeBackFragment" >
         <action
             android:id="@+id/action_welcomeBackFr_to_profileFr"
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/tradeFragment"
-        android:name="com.example.adhipradanatest.TradeFragment"
+        android:name="com.example.adhipradanatest.ui.TradeFragment"
         android:label="TradeFragment" >
         <action
             android:id="@+id/action_tradeFr_to_profileFr"

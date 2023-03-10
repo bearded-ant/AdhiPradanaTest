@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AdhiPradanaTest"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/layout_horizontal_padding"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/fr_sign_in_top_block"
@@ -23,7 +23,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_in"
-            android:textFontWeight="600"
             android:textSize="@dimen/header_text_size" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
