@@ -185,12 +185,26 @@
         <item name="strokeWidth">@dimen/seller_avatar_stroke_size</item>
     </style>
 
-    <style name="BigCard.Text" parent="">
+    <style name="MyTypo.Text.600" parent="">
         <item name="fontFamily">@font/poppins_semibold</item>
         <item name="android:letterSpacing">-0.06</item>
     </style>
 
-    <style name="BigCard.Text.Head" parent="BigCard.Text">
+    <style name="MyTypo.Text.400" parent="">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="MyTypo.Text.400.CategoryItem" parent="MyTypo.Text.400">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">11dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/item_category_text</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="BigCard.Text.Head" parent="MyTypo.Text.600">
         <item name="android:layout_width">@dimen/item_big_description_size</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">@dimen/margin_8dp</item>
@@ -208,23 +222,4 @@
         <item name="android:textSize">10sp</item>
     </style>
 
-    <style name="RoundedChips" parent="@style/Widget.MaterialComponents.Chip.Choice">
-        <item name="chipIconVisible">true</item>
-
-
-        <item name="chipMinHeight">@dimen/null_dp</item>
-        <item name="chipIconSize">24dp</item>
-        <item name="closeIconSize">18dp</item>
-
-        <item name="chipStartPadding">4dp</item>
-        <item name="iconStartPadding">0dp</item>
-        <item name="iconEndPadding">0dp</item>
-        <item name="textStartPadding">8dp</item>
-        <item name="textEndPadding">6dp</item>
-        <item name="closeIconStartPadding">2dp</item>
-        <item name="closeIconEndPadding">2dp</item>
-        <item name="chipEndPadding">6dp</item>
-
-
-    </style>
 </resources>
