@@ -7,94 +7,241 @@
     android:background="@color/primary_background"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_profile_top_block"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/fr_trade_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="@dimen/null_dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
-            android:text="Profile"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
-            android:layout_marginBottom="6dp"
-            android:src="@drawable/userpic"
-            app:shapeAppearanceOverlay="@style/MyCorner.Cut" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Change photo"
-            android:textColor="#808080"
-            android:textSize="8sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:layout_marginBottom="36dp"
-            android:text="Satria Adhi Pradana"
-            android:textColor="#3F3F3F"
-            android:textSize="15sp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fr_trade_search"
-            style="@style/MyInputTextLayout"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/MyAppBar"
             android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:layout_marginHorizontal="56dp"
-            app:endIconDrawable="@drawable/search"
-            app:endIconMinSize="36dp"
-            app:endIconMode="custom">
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/topmenu">
 
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/MyEditText"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:background="#F5F6F6"
-                android:maxLines="1"
-                android:inputType="text"
-                android:hint="What are you looking for ?" />
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </com.google.android.material.textfield.TextInputLayout>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    style="@style/MyTypo.Text.700"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Trade by "
+                    android:textAlignment="textEnd" />
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/fr_profile_middle_block"
+                <TextView
+                    style="@style/MyTypo.Text.700.subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="bata" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="47dp"
+                    android:src="@drawable/userpic"
+                    app:strokeColor="#4E4D4D"
+                    app:strokeWidth="1dp"
+                    app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--todo drop down menu-->
+    <TextView
+        style="@style/MyTypo.Text.400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="@dimen/margin_8dp"
+        android:text="@string/location_text"
+        android:textColor="#5B5B5B"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_trade_app_bar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fr_trade_search"
+        style="@style/MyInputTextLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/fr_profile_bottom_block"
+        android:layout_height="24dp"
+        android:layout_marginHorizontal="56dp"
+        android:layout_marginTop="35dp"
+        app:endIconDrawable="@drawable/search"
+        app:endIconMinSize="36dp"
+        app:endIconMode="custom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_profile_top_block">
+        app:layout_constraintTop_toBottomOf="@+id/fr_trade_app_bar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fr_trade_search_input"
+            style="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/fr_trade_tab_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        app:tabMode="scrollable"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="@color/primary_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr_trade_search" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fr_trade_latest_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="11dp"
+        android:layout_marginTop="29dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_trade_tab_categories">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <include layout="@layout/item_category" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/latest_deals"
+                android:textSize="15sp" />
 
-            <include layout="@layout/item_small" />
-
-            <include layout="@layout/item_big" />
-
+            <TextView
+                android:id="@+id/fr_trade_view_all_latest_tw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/view_all"
+                android:textAlignment="textEnd"
+                android:textColor="#808080"
+                android:textSize="9sp" />
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:id="@+id/fr_trade_latest_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fr_trade_flash_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="11dp"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_trade_latest_block">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/flash_sale"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/fr_trade_view_all_flash_tw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/view_all"
+                android:textAlignment="textEnd"
+                android:textColor="#808080"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:id="@+id/fr_trade_flash_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fr_trade_brands_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="11dp"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_trade_flash_block">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/brands"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/fr_trade_brands_flash_tw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/view_all"
+                android:textAlignment="textEnd"
+                android:textColor="#808080"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:id="@+id/fr_trade_brands_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/fr_profile_bottom_block"
@@ -102,8 +249,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fr_profile_middle_block">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
@@ -113,6 +259,5 @@
             android:background="@drawable/bottom_navigation_corners"
             app:menu="@menu/bottom_navigation_menu" />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
