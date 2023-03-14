@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.adhipradanatest.R
-import com.example.adhipradanatest.data.NetworkLayer
 import com.example.adhipradanatest.data.SharedViewModel
 import com.example.adhipradanatest.databinding.FragmentTradeBinding
+import com.squareup.picasso.Picasso
 
 class TradeFragment : Fragment() {
     companion object {
@@ -36,11 +36,12 @@ class TradeFragment : Fragment() {
         viewModel.flashSaleLiveData.observe(viewLifecycleOwner) {
 
             binding.tempcard.itemBigNameTw.text = it!!.flashSale[0].name
-            binding.tempcard.itemBigCategoryBtn.text = it!!.flashSale[0].category
+            binding.tempcard.itemBigCategoryBtn.text = it.flashSale[0].category
             binding.tempcard.itemBigDiscountBtn.text = it.flashSale[0].discount.toString()
             binding.tempcard.itemBigPriceTw.text = it.flashSale[0].price.toString()
 
-            return@observe
+            val imageView = binding.tempcard.itemBigImage
+            Picasso.get().load(it.flashSale[0].imageUrl).fit().into(imageView)
         }
         return binding.root
     }
