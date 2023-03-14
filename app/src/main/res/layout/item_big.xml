@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_big_card"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/item_big_card_width"
@@ -11,6 +12,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_big_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="false"
@@ -26,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/item_big_sale_btn"
+            android:id="@+id/item_big_discount_btn"
             style="@style/MyTextButton.BigCard.Discount"
             android:layout_width="@dimen/item_big_text_btn_width"
             android:layout_height="@dimen/item_big_text_btn_height"
@@ -48,12 +50,12 @@
             android:layout_width="@dimen/item_big_text_btn_width"
             android:layout_height="@dimen/item_big_text_btn_height"
             android:layout_marginStart="@dimen/null_dp"
-            app:layout_constraintStart_toStartOf="@+id/item_big_head_txt"
+            app:layout_constraintStart_toStartOf="@+id/item_big_name_tw"
             app:layout_constraintTop_toBottomOf="@+id/item_big_guideline"
             tools:text="Kids" />
 
         <TextView
-            android:id="@+id/item_big_head_txt"
+            android:id="@+id/item_big_name_tw"
             style="@style/BigCard.Text.Head"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_big_category_btn"
@@ -61,6 +63,7 @@
 
         <TextView
             style="@style/BigCard.Text.Cost"
+            android:id="@+id/item_big_price_tw"
             app:layout_constraintBottom_toBottomOf="@id/item_big_add_fab"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/item_big_add_fab"

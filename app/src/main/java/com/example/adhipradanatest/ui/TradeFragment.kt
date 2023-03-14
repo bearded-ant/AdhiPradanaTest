@@ -5,13 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.adhipradanatest.R
+import com.example.adhipradanatest.data.NetworkLayer
+import com.example.adhipradanatest.data.SharedViewModel
 import com.example.adhipradanatest.databinding.FragmentTradeBinding
 
 class TradeFragment : Fragment() {
     companion object {
         fun newInstance(): TradeFragment = TradeFragment()
+    }
+
+    private val viewModel: SharedViewModel by lazy {
+        ViewModelProvider(requireActivity())[SharedViewModel::class.java]
     }
 
     private var _binding: FragmentTradeBinding? = null
@@ -24,6 +31,17 @@ class TradeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentTradeBinding.inflate(layoutInflater)
+
+        viewModel.refreshFlashSale()
+        viewModel.flashSaleLiveData.observe(viewLifecycleOwner) {
+
+            binding.tempcard.itemBigNameTw.text = it!!.flashSale[0].name
+            binding.tempcard.itemBigCategoryBtn.text = it!!.flashSale[0].category
+            binding.tempcard.itemBigDiscountBtn.text = it.flashSale[0].discount.toString()
+            binding.tempcard.itemBigPriceTw.text = it.flashSale[0].price.toString()
+
+            return@observe
+        }
         return binding.root
     }
 

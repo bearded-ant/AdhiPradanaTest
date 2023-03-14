@@ -142,6 +142,8 @@
                 android:textSize="9sp" />
         </LinearLayout>
 
+        <include layout="@layout/item_big" android:id="@+id/tempcard"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="@dimen/margin_8dp"
             android:id="@+id/fr_trade_latest_recycler"
