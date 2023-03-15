@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.adhipradanatest.R
 import com.example.adhipradanatest.data.SharedViewModel
 import com.example.adhipradanatest.databinding.FragmentTradeBinding
-import com.squareup.picasso.Picasso
 
 class TradeFragment : Fragment() {
     companion object {
@@ -32,16 +31,15 @@ class TradeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentTradeBinding.inflate(layoutInflater)
-//todo revers layout? wtf?
-        val layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, true)
 
+        val latestDealLayoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val recyclerLastDeal = binding.frTradeLatestRecycler
-        recyclerLastDeal.layoutManager = layoutManager
+        recyclerLastDeal.layoutManager = latestDealLayoutManager
 
         viewModel.refreshLatestDeal()
         viewModel.latestDealLiveData.observe(viewLifecycleOwner) {
-            recyclerLastDeal.adapter = RecyclerLatestDealAdapter( it!!.latest)
+            recyclerLastDeal.adapter = RecyclerLatestDealAdapter(it!!.latest)
         }
         return binding.root
     }

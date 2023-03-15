@@ -23,11 +23,14 @@ class RecyclerLatestDealAdapter(
     }
 
     override fun onBindViewHolder(holder: LastDealViewHolder, position: Int) {
-        holder.latestName.text = internalData[position].name
+        val latestDeal = internalData[position]
+        holder.latestName.text = latestDeal.name
+        holder.latestCategory.text = latestDeal.name
+        holder.latestPrice.text = latestDeal.price.toString()
+        holder.latestImage.showIcon(latestDeal.imageUrl)
     }
 
     override fun getItemCount(): Int = internalData.size
-
 
     class LastDealViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val latestImage: ShapeableImageView = view.findViewById(R.id.item_small_image)
@@ -36,7 +39,6 @@ class RecyclerLatestDealAdapter(
         val latestPrice: TextView = view.findViewById(R.id.item_small_price)
     }
 }
-
 
 private fun ShapeableImageView.showIcon(icon: String, placeHolderRes: Int = R.drawable.google) {
     Picasso.get()
