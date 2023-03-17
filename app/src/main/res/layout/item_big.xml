@@ -3,6 +3,7 @@
     android:id="@+id/item_big_card"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/margin_8dp"
     android:layout_width="@dimen/item_big_card_width"
     android:layout_height="@dimen/item_big_card_height"
     app:cardElevation="@dimen/null_dp">

@@ -41,6 +41,17 @@ class TradeFragment : Fragment() {
         viewModel.latestDealLiveData.observe(viewLifecycleOwner) {
             recyclerLastDeal.adapter = RecyclerLatestDealAdapter(it!!.latest)
         }
+
+        val flashSaleLayoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val flashSaleRecycler = binding.frTradeFlashRecycler
+        flashSaleRecycler.layoutManager = flashSaleLayoutManager
+
+        viewModel.refreshFlashSale()
+        viewModel.flashSaleLiveData.observe(viewLifecycleOwner) {
+            flashSaleRecycler.adapter = RecyclerFlashSaleAdapter(it!!)
+        }
+
         return binding.root
     }
 

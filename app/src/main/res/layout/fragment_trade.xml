@@ -48,15 +48,13 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="47dp"
                     android:src="@drawable/userpic"
-                    app:strokeColor="#4E4D4D"
-                    app:strokeWidth="1dp"
                     app:shapeAppearanceOverlay="@style/MyCorner.ImageCorner50percent.Cut"
-                    />
+                    app:strokeColor="#4E4D4D"
+                    app:strokeWidth="1dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--todo drop down menu-->
     <TextView
         style="@style/MyTypo.Text.400"
         android:layout_width="wrap_content"
@@ -97,150 +95,160 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
-        app:tabMode="scrollable"
         android:layout_marginTop="17dp"
         android:backgroundTint="@color/primary_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_trade_search" />
+        app:layout_constraintTop_toBottomOf="@+id/fr_trade_search"
+        app:tabMode="scrollable" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_trade_latest_block"
+
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="11dp"
-        android:layout_marginTop="29dp"
-        android:orientation="vertical"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fr_profile_bottom_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fr_trade_tab_categories">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fr_trade_latest_block"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/latest_deals"
-                android:textSize="15sp" />
+                android:layout_marginHorizontal="11dp"
+                android:layout_marginTop="29dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/fr_trade_view_all_latest_tw"
-                android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/latest_deals"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/fr_trade_view_all_latest_tw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/view_all"
+                        android:textAlignment="textEnd"
+                        android:textColor="#808080"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fr_trade_latest_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:orientation="horizontal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fr_trade_flash_block"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/view_all"
-                android:textAlignment="textEnd"
-                android:textColor="#808080"
-                android:textSize="9sp" />
-        </LinearLayout>
+                android:layout_marginHorizontal="11dp"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="@dimen/margin_8dp"
-            android:id="@+id/fr_trade_latest_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_trade_flash_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="11dp"
-        android:layout_marginTop="17dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fr_trade_latest_block">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/flash_sale"
+                        android:textSize="15sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/fr_trade_view_all_flash_tw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/view_all"
+                        android:textAlignment="textEnd"
+                        android:textColor="#808080"
+                        android:textSize="9sp" />
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="0dp"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fr_trade_flash_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:orientation="horizontal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/fr_trade_brands_block"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/flash_sale"
-                android:textSize="15sp" />
+                android:layout_marginHorizontal="11dp"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/fr_trade_view_all_flash_tw"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/view_all"
-                android:textAlignment="textEnd"
-                android:textColor="#808080"
-                android:textSize="9sp" />
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="@dimen/margin_8dp"
-            android:id="@+id/fr_trade_flash_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/brands"
+                        android:textSize="15sp" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/fr_trade_brands_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="11dp"
-        android:layout_marginTop="17dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fr_trade_flash_block">
+                    <TextView
+                        android:id="@+id/fr_trade_brands_flash_tw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/view_all"
+                        android:textAlignment="textEnd"
+                        android:textColor="#808080"
+                        android:textSize="9sp" />
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fr_trade_brands_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:orientation="horizontal" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/brands"
-                android:textSize="15sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <TextView
-                android:id="@+id/fr_trade_brands_flash_tw"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/view_all"
-                android:textAlignment="textEnd"
-                android:textColor="#808080"
-                android:textSize="9sp" />
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="@dimen/margin_8dp"
-            android:id="@+id/fr_trade_brands_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/fr_profile_bottom_block"
